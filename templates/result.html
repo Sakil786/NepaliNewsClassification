@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			Nepali News Classifier:business,sports,entertainment  -By SAKIL ANSARI
+		</div>
+		<h2>Classification of Nepali News headings</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b>Results for News Headings</b></p>
+	<div class="results">
+
+
+		
+	{% if prediction == 1%}
+	<h2 style="color:red;">News Heading is relared to SPORTS</h2>
+	{% elif prediction == 0%}
+	<h2 style="color:blue;">News Heading is relared to BUSINESS</h2>
+	{% elif prediction == 2%}
+	<h2 style="color:blue;">News Heading is relared to ENTERTAINMENT</h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
